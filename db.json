@@ -2,37 +2,37 @@
   "menu": [
     {
       "name": "Peach Tea w/boba",
-      "src": "@/assets/bbt/bbt-1.png",
+      "src": "bbt-1.png",
       "title": "Peach tea and bubble tea ",
       "price": 60
     },
     {
       "name": "Mint Milk Tea w/boba",
-      "src": "@/assets/bbt/bbt-2.png",
+      "src": "bbt-2.png",
       "title": "Milk tea with mint syrup and bubble tea",
       "price": 80
     },
     {
       "name": "StrawBerry Soda w/boba",
-      "src": "@/assets/bbt/bbt-3.png",
+      "src": "bbt-3.png",
       "title": "Strawberry syrup with soda and bubble tea",
       "price": 50
     },
     {
       "name": "Brown Sugar Milk Tea w/boba",
-      "src": "@/assets/bbt/bbt-4.png",
+      "src": "bbt-4.png",
       "title": "Brown sugar milk tea and bubble tea",
       "price": 95
     },
     {
       "name": "Jasmine  Milk Tea w/boba",
-      "src": "@/assets/bbt/bbt-5.png",
+      "src": "bbt-5.png",
       "title": "Milk tea with jasmine flavour and bubble tea",
       "price": 80
     },
     {
       "name": "Taro Milk Tea w/boba",
-      "src": "@/assets/bbt/bbt-6.png",
+      "src": "bbt-6.png",
       "title": "Milk tea with taro flavour and bubble tea",
       "price": 80
     }

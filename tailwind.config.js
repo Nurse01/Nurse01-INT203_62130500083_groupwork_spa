@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
     theme: {
         colors: {
-            darkBlue: '#003049',
+            
             tea:'#e5bda0',
             transparent: 'transparent',
             current: 'currentColor',
