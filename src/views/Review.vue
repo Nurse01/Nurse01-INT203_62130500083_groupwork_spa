@@ -1,7 +1,8 @@
 <template>
   <div id="order">
     <h1 class="text-4xl text-center m-10">Review</h1>
-    <div class="p-10 ml-20">
+    <div class="p-10 ml-20 grid grid-cols-2 justify-center">
+      <div>
       <form name="review-form" @submit.prevent="submitForm">
         <div class="m-5">
           <label class="label" for="name">Your Name</label><br />
@@ -26,21 +27,28 @@
           <button class="btn">Submit</button>
         </div>
       </form>
-    </div>
+      </div>
+    
     <div>
       <ul v-for="review in reviews" :key="review.id">
-        <li>
-          <span>Name : {{ review.name }}</span> <br />
-          <span>Comment : {{ review.comment }}</span>
-        </li>
-        <button @click="editButton(review)" class="bg-tea m-5 w-5 h-5">
-          <img src="../assets/edit.png" />
-        </button>
-        <button @click="deleteReview(review.id)" class="bg-tea  w-5 h-5">
-          <img src="../assets/delete.png" />
-        </button>
+        <review-bord>
+          <li>
+            <span>Name : {{ review.name }}</span> <br />
+            <span>Comment : {{ review.comment }}</span>
+          </li>
+          <button @click="editButton(review)" class="border-2 border-indigo-600 m-5 w-5 h-5 ">
+            <img src="../assets/edit.png" />
+          </button>
+          <button @click="deleteReview(review.id)" class="border-2 border-indigo-600  w-5 h-5 ">
+            <img src="../assets/delete.png" />
+          </button>
+        </review-bord>
       </ul>
     </div>
+    </div>
+  <router-link to="/" class="flex justify-center">
+    <button class="btn">Home</button>
+  </router-link>
   </div>
 </template>
 <style scoped>
@@ -50,8 +58,12 @@
 }
 </style>
 <script>
+import ReviewBord from "../components/ReviewBord.vue";
 export default {
   name: "Review",
+  components: {
+    ReviewBord,
+  },
   data() {
     return {
       enteredName: "",
@@ -76,9 +88,8 @@ export default {
       } else {
         this.addReview();
       }
-      this.enteredName =""
-      this.enteredComment= ""
-     
+      this.enteredName = "";
+      this.enteredComment = "";
     },
 
     async addReview() {
@@ -134,7 +145,7 @@ export default {
             ? { ...review, name: data.name, comment: data.comment }
             : review
         );
-         this.isEditing = false;
+        this.isEditing = false;
       } catch (error) {
         console.log(error);
       }
