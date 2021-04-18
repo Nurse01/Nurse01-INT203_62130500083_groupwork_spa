@@ -3,7 +3,7 @@
     {
       "name": "Peach Tea w/boba",
       "src": "bbt-1.png",
-      "title": "Peach tea and bubble tea ",
+      "title": "Peach tea and bubble tea",
       "price": 60
     },
     {
@@ -35,6 +35,24 @@
       "src": "bbt-6.png",
       "title": "Milk tea with taro flavour and bubble tea",
       "price": 80
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "name": "this.enteredName",
+      "comment": "this.enteredComment",
+      "id": 3
+    },
+    {
+      "name": "tttt",
+      "comment": "gggg",
+      "id": 4
     }
   ]
 }

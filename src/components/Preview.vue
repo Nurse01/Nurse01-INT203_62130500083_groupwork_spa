@@ -10,10 +10,12 @@
 <script>
 export default {
   name: "Preview",
-  methods: {
-    // setInterval(() => {
-    //   document.querySelector('.pictures')
-    // }, 5000);
-  },
+  // methods: {
+  //    changeImg(){
+
+  //   }
+
+  // }
+  
 };
 </script>

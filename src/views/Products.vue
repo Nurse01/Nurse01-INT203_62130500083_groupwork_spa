@@ -1,6 +1,6 @@
 <template>
   <div id="products">
-    <h1 class="text-white text-4xl text-center">Bubble Tea</h1>
+    <h1 class=" text-4xl text-center m-10">- Menu -</h1>
     <div class="grid grid-cols-2 justify-center m-10 ">
       <ul v-for="item in menu" :key="item.name">
         <bubble-tea>
@@ -9,9 +9,9 @@
               <img :src="getImgPath(item.src)" />
             </div>
             <div class="text-xl m-10">
-              <span>{{ item.name }}</span
+              <span class="">{{ item.name }}</span
               ><br />
-              <span>{{ item.title }}</span
+              <span class="text-sm font-light	">({{ item.title }})</span
               ><br />
               <span>{{ item.price }}</span>
             </div>
@@ -20,15 +20,15 @@
       </ul>
     </div>
     
-      <div class="flex justify-center pb-10 gap-4">
+      <div class="flex justify-center pb-10 gap-4 ">
          <router-link to="/">
-         <button class="bg-tea rounded-full py-3 px-6 ">
+         <button class="btn">
          Back
         </button>
         </router-link>
-        <router-link to="/order">
-        <button class="bg-tea rounded-full py-3 px-6 ">
-          Order
+        <router-link to="/review">
+        <button class="btn">
+          Review
         </button>
         </router-link>
        
@@ -38,12 +38,10 @@
 </template>
 
 <script>
-import BubbleTea from "@/components/BubbleTea.vue";
+
 export default {
   name: "Products",
-  components: {
-    BubbleTea,
-  },
+ 
   data() {
     return {
       menu: [],
@@ -59,12 +57,9 @@ export default {
         console.log(error);
       }
     },
-    getImgPath(name) {
-      return require("@/assets/bbt/" + name);
-    },
-  },
   async created() {
     this.menu = await this.fetchMenu();
+  }
   },
 };
 </script>

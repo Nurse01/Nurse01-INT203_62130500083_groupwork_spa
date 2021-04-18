@@ -9,7 +9,7 @@
       I mean, have you tried buying boba tea? It’s the same thing!
     </div>
     <router-link to="/products">
-      <button class="bg-tea rounded-full py-3 px-6">View Product</button>
+      <button class="btn">View Product</button>
     </router-link>
   </div>
 </template>
